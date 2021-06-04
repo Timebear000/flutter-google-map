@@ -1,0 +1,11 @@
+Content 에서 길찾기를 클릭시  MapView를 띄운다. ( 이때 목적지에 좌표값과 정보들을 argument로 보내준다.);
+
+Step 1  현재 기기의 위치를 받아 src  변수, 목적지 정위치는 dest에 저장한다.
+Step 2  src와 dest의 polyline을 계산 한다. 이를 _info에 저장한다. => 만약 경로가 없다면 Alert창을 알려준뒤 위젯을 닫고 전 페이지로 이동한다.
+
+Step 3  화면에 GoogleMap 위젯을 호출하여 맵을 그려준다. 
+Step 4  화면 initialCameraPosition 속성은 polyline 을 중앙으로 padding 100으로 한다.
+Step 5  화면 marker로 src 와 dest , polyline 속성으로 _info 를 그려준다.
+
+Function 1 3초마다 사용자의 현재 위치를 가져와 src 부분과 10m ~ 20m 차이가 난다면 src 와 polyline을 갱신해준다.
+Function 2 사용자 편의 기능을 위해 경로보기와 현재 내 위치를 보여준다. (경로보기는 7과 동일하다) 
